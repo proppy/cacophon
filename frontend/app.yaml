@@ -10,28 +10,22 @@ manual_scaling:
 
 handlers:
 - url: /
-  static_files: assets/index.html
-  upload: assets/index\.html
+  static_files: dist/index.html
+  upload: dist/index\.html
+
+- url: /js
+  static_dir: dist/js
+
+- url: /img
+  static_dir: dist/img
 
 - url: /favicon\.ico
-  static_files: assets/favicon.ico
-  upload: assets/favicon\.ico
+  static_files: dist/favicon.ico
+  upload: dist/favicon\.ico
 
 - url: /robots\.txt
-  static_files: assets/robots.txt
-  upload: assets/robots\.txt
-
-- url: /images
-  static_dir: assets/images
-
-- url: /components
-  static_dir: assets/components
-
-- url: /bower_components
-  static_dir: assets/bower_components
-
-- url: /linker
-  static_dir: assets/linker
+  static_files: dist/robots.txt
+  upload: dist/robots\.text
 
 - url: /.*
   script: server.js
